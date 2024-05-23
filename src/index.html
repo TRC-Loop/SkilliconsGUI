@@ -1,0 +1,598 @@
+<!--
+ * author: AK
+ * created on 23-05-2024-19h-08m
+ * github: https://github.com/TRC-Loop
+ * email: ak@stellar-code.com
+ * copyright 2024
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png"
+        href="https://next.stellar-cloud.com/index.php/s/Z8KPbfjSFJfb4Rr/download/Logo.png">
+    <title>Skill Icons Generator</title>
+</head>
+
+<body>
+    <div class="content">
+        <header class="header">
+            <img src="https://next.stellar-cloud.com/index.php/s/Z8KPbfjSFJfb4Rr/download/Logo.png" width="64"
+                height="64" class="logo">
+            <h1 class="title">Skill Icons Generator</h1>
+            &nbsp;&nbsp;&nbsp;
+            <a href="https://github.com/TRC-Loop" target="_blank" class="icon-link">
+                <i class="bi bi-github icon"></i>
+            </a>
+        </header>
+        <main>
+            <sep></sep>
+            <p class="small padding-top">This is a GUI to create the Skill Icons link, for your Github Readme. However,
+                I have not
+                made <a href="https://skillicons.dev" target="_blank">Skill Icons</a>,<br> This is just a visual
+                designer. I know, they are working on one but I thought it was a fun project.
+            </p>
+            <p class="small footer-text-align">made by AK - Icon Credits
+                to <a href="https://skillicons.dev" target="_blank"><img src="https://skillicons.dev/favicon.png"
+                        width=12 height=12 alt="Favicon"> Skillicons</a></p>
+
+
+        </main>
+        <div>
+            <div class="form-group">
+                <label for="iconsPerLineRange" class="form-label">Icons per Line: <span class="monospacefont"
+                        id="iconsPerLineValue">15</span></label>
+                <input type="range" class="form-range" min="1" max="50" step="1" id="iconsPerLineRange" value="15">
+                <!-- Theme switch added here -->
+                <label for="themeSwitch">Theme</label>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="themeSwitch">
+                    <label class="form-check-label" for="themeSwitch" id="themelbl">Change Icon Theme</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="search-bar mb-3 position-relative">
+                    <input type="text" class="form-control" id="searchInput" placeholder="Search icons..."
+                        autocomplete="off">
+                    <button type="button" class="btn-clear" id="clearSearch" style="display:none;">&times;</button>
+                    <i class="bi bi-search search-icon"></i>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container">
+
+        <div id="box1" class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="https://skillicons.dev/icons?i=ableton&perline=1" draggable="true" ondragstart="drag(event)"
+                id="ableton" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=activitypub&perline=1" draggable="true" ondragstart="drag(event)"
+                id="activitypub" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=actix&perline=1" draggable="true" ondragstart="drag(event)"
+                id="actix" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=adonis&perline=1" draggable="true" ondragstart="drag(event)"
+                id="adonis" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=ae&perline=1" draggable="true" ondragstart="drag(event)" id="ae"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=aiscript&perline=1" draggable="true" ondragstart="drag(event)"
+                id="aiscript" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=alpinejs&perline=1" draggable="true" ondragstart="drag(event)"
+                id="alpinejs" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=anaconda&perline=1" draggable="true" ondragstart="drag(event)"
+                id="anaconda" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=androidstudio&perline=1" draggable="true" ondragstart="drag(event)"
+                id="androidstudio" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=angular&perline=1" draggable="true" ondragstart="drag(event)"
+                id="angular" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=ansible&perline=1" draggable="true" ondragstart="drag(event)"
+                id="ansible" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=apollo&perline=1" draggable="true" ondragstart="drag(event)"
+                id="apollo" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=apple&perline=1" draggable="true" ondragstart="drag(event)"
+                id="apple" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=appwrite&perline=1" draggable="true" ondragstart="drag(event)"
+                id="appwrite" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=arch&perline=1" draggable="true" ondragstart="drag(event)"
+                id="arch" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=arduino&perline=1" draggable="true" ondragstart="drag(event)"
+                id="arduino" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=astro&perline=1" draggable="true" ondragstart="drag(event)"
+                id="astro" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=atom&perline=1" draggable="true" ondragstart="drag(event)"
+                id="atom" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=au&perline=1" draggable="true" ondragstart="drag(event)" id="au"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=autocad&perline=1" draggable="true" ondragstart="drag(event)"
+                id="autocad" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=aws&perline=1" draggable="true" ondragstart="drag(event)" id="aws"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=azul&perline=1" draggable="true" ondragstart="drag(event)"
+                id="azul" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=azure&perline=1" draggable="true" ondragstart="drag(event)"
+                id="azure" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=babel&perline=1" draggable="true" ondragstart="drag(event)"
+                id="babel" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=bash&perline=1" draggable="true" ondragstart="drag(event)"
+                id="bash" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=bevy&perline=1" draggable="true" ondragstart="drag(event)"
+                id="bevy" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=bitbucket&perline=1" draggable="true" ondragstart="drag(event)"
+                id="bitbucket" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=blender&perline=1" draggable="true" ondragstart="drag(event)"
+                id="blender" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=bootstrap&perline=1" draggable="true" ondragstart="drag(event)"
+                id="bootstrap" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=bsd&perline=1" draggable="true" ondragstart="drag(event)" id="bsd"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=bun&perline=1" draggable="true" ondragstart="drag(event)" id="bun"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=c&perline=1" draggable="true" ondragstart="drag(event)" id="c"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=cs&perline=1" draggable="true" ondragstart="drag(event)" id="cs"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=cpp&perline=1" draggable="true" ondragstart="drag(event)" id="cpp"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=crystal&perline=1" draggable="true" ondragstart="drag(event)"
+                id="crystal" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=cassandra&perline=1" draggable="true" ondragstart="drag(event)"
+                id="cassandra" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=clion&perline=1" draggable="true" ondragstart="drag(event)"
+                id="clion" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=clojure&perline=1" draggable="true" ondragstart="drag(event)"
+                id="clojure" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=cloudflare&perline=1" draggable="true" ondragstart="drag(event)"
+                id="cloudflare" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=cmake&perline=1" draggable="true" ondragstart="drag(event)"
+                id="cmake" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=codepen&perline=1" draggable="true" ondragstart="drag(event)"
+                id="codepen" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=coffeescript&perline=1" draggable="true" ondragstart="drag(event)"
+                id="coffeescript" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=css&perline=1" draggable="true" ondragstart="drag(event)" id="css"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=cypress&perline=1" draggable="true" ondragstart="drag(event)"
+                id="cypress" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=d3&perline=1" draggable="true" ondragstart="drag(event)" id="d3"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=dart&perline=1" draggable="true" ondragstart="drag(event)"
+                id="dart" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=debian&perline=1" draggable="true" ondragstart="drag(event)"
+                id="debian" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=deno&perline=1" draggable="true" ondragstart="drag(event)"
+                id="deno" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=devto&perline=1" draggable="true" ondragstart="drag(event)"
+                id="devto" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=discord&perline=1" draggable="true" ondragstart="drag(event)"
+                id="discord" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=bots&perline=1" draggable="true" ondragstart="drag(event)"
+                id="bots" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=discordjs&perline=1" draggable="true" ondragstart="drag(event)"
+                id="discordjs" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=django&perline=1" draggable="true" ondragstart="drag(event)"
+                id="django" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=docker&perline=1" draggable="true" ondragstart="drag(event)"
+                id="docker" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=dotnet&perline=1" draggable="true" ondragstart="drag(event)"
+                id="dotnet" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=dynamodb&perline=1" draggable="true" ondragstart="drag(event)"
+                id="dynamodb" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=eclipse&perline=1" draggable="true" ondragstart="drag(event)"
+                id="eclipse" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=elasticsearch&perline=1" draggable="true" ondragstart="drag(event)"
+                id="elasticsearch" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=electron&perline=1" draggable="true" ondragstart="drag(event)"
+                id="electron" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=elixir&perline=1" draggable="true" ondragstart="drag(event)"
+                id="elixir" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=elysia&perline=1" draggable="true" ondragstart="drag(event)"
+                id="elysia" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=emacs&perline=1" draggable="true" ondragstart="drag(event)"
+                id="emacs" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=ember&perline=1" draggable="true" ondragstart="drag(event)"
+                id="ember" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=emotion&perline=1" draggable="true" ondragstart="drag(event)"
+                id="emotion" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=express&perline=1" draggable="true" ondragstart="drag(event)"
+                id="express" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=fastapi&perline=1" draggable="true" ondragstart="drag(event)"
+                id="fastapi" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=fediverse&perline=1" draggable="true" ondragstart="drag(event)"
+                id="fediverse" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=figma&perline=1" draggable="true" ondragstart="drag(event)"
+                id="figma" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=firebase&perline=1" draggable="true" ondragstart="drag(event)"
+                id="firebase" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=flask&perline=1" draggable="true" ondragstart="drag(event)"
+                id="flask" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=flutter&perline=1" draggable="true" ondragstart="drag(event)"
+                id="flutter" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=forth&perline=1" draggable="true" ondragstart="drag(event)"
+                id="forth" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=fortran&perline=1" draggable="true" ondragstart="drag(event)"
+                id="fortran" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=gamemakerstudio&perline=1" draggable="true"
+                ondragstart="drag(event)" id="gamemakerstudio" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=gatsby&perline=1" draggable="true" ondragstart="drag(event)"
+                id="gatsby" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=gcp&perline=1" draggable="true" ondragstart="drag(event)" id="gcp"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=git&perline=1" draggable="true" ondragstart="drag(event)" id="git"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=github&perline=1" draggable="true" ondragstart="drag(event)"
+                id="github" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=githubactions&perline=1" draggable="true" ondragstart="drag(event)"
+                id="githubactions" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=gitlab&perline=1" draggable="true" ondragstart="drag(event)"
+                id="gitlab" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=gmail&perline=1" draggable="true" ondragstart="drag(event)"
+                id="gmail" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=gherkin&perline=1" draggable="true" ondragstart="drag(event)"
+                id="gherkin" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=go&perline=1" draggable="true" ondragstart="drag(event)" id="go"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=gradle&perline=1" draggable="true" ondragstart="drag(event)"
+                id="gradle" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=godot&perline=1" draggable="true" ondragstart="drag(event)"
+                id="godot" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=grafana&perline=1" draggable="true" ondragstart="drag(event)"
+                id="grafana" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=graphql&perline=1" draggable="true" ondragstart="drag(event)"
+                id="graphql" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=gtk&perline=1" draggable="true" ondragstart="drag(event)" id="gtk"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=gulp&perline=1" draggable="true" ondragstart="drag(event)"
+                id="gulp" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=haskell&perline=1" draggable="true" ondragstart="drag(event)"
+                id="haskell" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=haxe&perline=1" draggable="true" ondragstart="drag(event)"
+                id="haxe" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=haxeflixel&perline=1" draggable="true" ondragstart="drag(event)"
+                id="haxeflixel" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=heroku&perline=1" draggable="true" ondragstart="drag(event)"
+                id="heroku" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=hibernate&perline=1" draggable="true" ondragstart="drag(event)"
+                id="hibernate" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=html&perline=1" draggable="true" ondragstart="drag(event)"
+                id="html" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=htmx&perline=1" draggable="true" ondragstart="drag(event)"
+                id="htmx" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=idea&perline=1" draggable="true" ondragstart="drag(event)"
+                id="idea" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=ai&perline=1" draggable="true" ondragstart="drag(event)" id="ai"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=instagram&perline=1" draggable="true" ondragstart="drag(event)"
+                id="instagram" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=ipfs&perline=1" draggable="true" ondragstart="drag(event)"
+                id="ipfs" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=java&perline=1" draggable="true" ondragstart="drag(event)"
+                id="java" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=js&perline=1" draggable="true" ondragstart="drag(event)" id="js"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=jenkins&perline=1" draggable="true" ondragstart="drag(event)"
+                id="jenkins" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=jest&perline=1" draggable="true" ondragstart="drag(event)"
+                id="jest" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=jquery&perline=1" draggable="true" ondragstart="drag(event)"
+                id="jquery" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=kafka&perline=1" draggable="true" ondragstart="drag(event)"
+                id="kafka" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=kali&perline=1" draggable="true" ondragstart="drag(event)"
+                id="kali" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=kotlin&perline=1" draggable="true" ondragstart="drag(event)"
+                id="kotlin" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=ktor&perline=1" draggable="true" ondragstart="drag(event)"
+                id="ktor" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=kubernetes&perline=1" draggable="true" ondragstart="drag(event)"
+                id="kubernetes" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=laravel&perline=1" draggable="true" ondragstart="drag(event)"
+                id="laravel" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=latex&perline=1" draggable="true" ondragstart="drag(event)"
+                id="latex" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=less&perline=1" draggable="true" ondragstart="drag(event)"
+                id="less" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=linkedin&perline=1" draggable="true" ondragstart="drag(event)"
+                id="linkedin" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=linux&perline=1" draggable="true" ondragstart="drag(event)"
+                id="linux" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=lit&perline=1" draggable="true" ondragstart="drag(event)" id="lit"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=lua&perline=1" draggable="true" ondragstart="drag(event)" id="lua"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=md&perline=1" draggable="true" ondragstart="drag(event)" id="md"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=mastodon&perline=1" draggable="true" ondragstart="drag(event)"
+                id="mastodon" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=materialui&perline=1" draggable="true" ondragstart="drag(event)"
+                id="materialui" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=matlab&perline=1" draggable="true" ondragstart="drag(event)"
+                id="matlab" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=maven&perline=1" draggable="true" ondragstart="drag(event)"
+                id="maven" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=mint&perline=1" draggable="true" ondragstart="drag(event)"
+                id="mint" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=misskey&perline=1" draggable="true" ondragstart="drag(event)"
+                id="misskey" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=mongodb&perline=1" draggable="true" ondragstart="drag(event)"
+                id="mongodb" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=mysql&perline=1" draggable="true" ondragstart="drag(event)"
+                id="mysql" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=neovim&perline=1" draggable="true" ondragstart="drag(event)"
+                id="neovim" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=nestjs&perline=1" draggable="true" ondragstart="drag(event)"
+                id="nestjs" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=netlify&perline=1" draggable="true" ondragstart="drag(event)"
+                id="netlify" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=nextjs&perline=1" draggable="true" ondragstart="drag(event)"
+                id="nextjs" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=nginx&perline=1" draggable="true" ondragstart="drag(event)"
+                id="nginx" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=nim&perline=1" draggable="true" ondragstart="drag(event)" id="nim"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=nix&perline=1" draggable="true" ondragstart="drag(event)" id="nix"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=nodejs&perline=1" draggable="true" ondragstart="drag(event)"
+                id="nodejs" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=notion&perline=1" draggable="true" ondragstart="drag(event)"
+                id="notion" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=npm&perline=1" draggable="true" ondragstart="drag(event)" id="npm"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=nuxtjs&perline=1" draggable="true" ondragstart="drag(event)"
+                id="nuxtjs" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=obsidian&perline=1" draggable="true" ondragstart="drag(event)"
+                id="obsidian" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=ocaml&perline=1" draggable="true" ondragstart="drag(event)"
+                id="ocaml" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=octave&perline=1" draggable="true" ondragstart="drag(event)"
+                id="octave" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=opencv&perline=1" draggable="true" ondragstart="drag(event)"
+                id="opencv" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=openshift&perline=1" draggable="true" ondragstart="drag(event)"
+                id="openshift" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=openstack&perline=1" draggable="true" ondragstart="drag(event)"
+                id="openstack" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=p5js&perline=1" draggable="true" ondragstart="drag(event)"
+                id="p5js" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=perl&perline=1" draggable="true" ondragstart="drag(event)"
+                id="perl" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=ps&perline=1" draggable="true" ondragstart="drag(event)" id="ps"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=php&perline=1" draggable="true" ondragstart="drag(event)" id="php"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=phpstorm&perline=1" draggable="true" ondragstart="drag(event)"
+                id="phpstorm" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=pinia&perline=1" draggable="true" ondragstart="drag(event)"
+                id="pinia" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=pkl&perline=1" draggable="true" ondragstart="drag(event)" id="pkl"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=plan9&perline=1" draggable="true" ondragstart="drag(event)"
+                id="plan9" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=planetscale&perline=1" draggable="true" ondragstart="drag(event)"
+                id="planetscale" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=pnpm&perline=1" draggable="true" ondragstart="drag(event)"
+                id="pnpm" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=postgres&perline=1" draggable="true" ondragstart="drag(event)"
+                id="postgres" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=postman&perline=1" draggable="true" ondragstart="drag(event)"
+                id="postman" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=powershell&perline=1" draggable="true" ondragstart="drag(event)"
+                id="powershell" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=pr&perline=1" draggable="true" ondragstart="drag(event)" id="pr"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=prisma&perline=1" draggable="true" ondragstart="drag(event)"
+                id="prisma" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=processing&perline=1" draggable="true" ondragstart="drag(event)"
+                id="processing" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=prometheus&perline=1" draggable="true" ondragstart="drag(event)"
+                id="prometheus" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=pug&perline=1" draggable="true" ondragstart="drag(event)" id="pug"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=pycharm&perline=1" draggable="true" ondragstart="drag(event)"
+                id="pycharm" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=py&perline=1" draggable="true" ondragstart="drag(event)" id="py"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=pytorch&perline=1" draggable="true" ondragstart="drag(event)"
+                id="pytorch" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=qt&perline=1" draggable="true" ondragstart="drag(event)" id="qt"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=r&perline=1" draggable="true" ondragstart="drag(event)" id="r"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=rabbitmq&perline=1" draggable="true" ondragstart="drag(event)"
+                id="rabbitmq" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=rails&perline=1" draggable="true" ondragstart="drag(event)"
+                id="rails" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=raspberrypi&perline=1" draggable="true" ondragstart="drag(event)"
+                id="raspberrypi" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=react&perline=1" draggable="true" ondragstart="drag(event)"
+                id="react" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=reactivex&perline=1" draggable="true" ondragstart="drag(event)"
+                id="reactivex" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=redhat&perline=1" draggable="true" ondragstart="drag(event)"
+                id="redhat" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=redis&perline=1" draggable="true" ondragstart="drag(event)"
+                id="redis" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=redux&perline=1" draggable="true" ondragstart="drag(event)"
+                id="redux" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=regex&perline=1" draggable="true" ondragstart="drag(event)"
+                id="regex" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=remix&perline=1" draggable="true" ondragstart="drag(event)"
+                id="remix" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=replit&perline=1" draggable="true" ondragstart="drag(event)"
+                id="replit" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=rider&perline=1" draggable="true" ondragstart="drag(event)"
+                id="rider" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=robloxstudio&perline=1" draggable="true" ondragstart="drag(event)"
+                id="robloxstudio" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=rocket&perline=1" draggable="true" ondragstart="drag(event)"
+                id="rocket" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=rollupjs&perline=1" draggable="true" ondragstart="drag(event)"
+                id="rollupjs" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=ros&perline=1" draggable="true" ondragstart="drag(event)" id="ros"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=ruby&perline=1" draggable="true" ondragstart="drag(event)"
+                id="ruby" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=rust&perline=1" draggable="true" ondragstart="drag(event)"
+                id="rust" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=sass&perline=1" draggable="true" ondragstart="drag(event)"
+                id="sass" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=spring&perline=1" draggable="true" ondragstart="drag(event)"
+                id="spring" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=sqlite&perline=1" draggable="true" ondragstart="drag(event)"
+                id="sqlite" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=stackoverflow&perline=1" draggable="true" ondragstart="drag(event)"
+                id="stackoverflow" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=styledcomponents&perline=1" draggable="true"
+                ondragstart="drag(event)" id="styledcomponents" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=sublime&perline=1" draggable="true" ondragstart="drag(event)"
+                id="sublime" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=supabase&perline=1" draggable="true" ondragstart="drag(event)"
+                id="supabase" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=scala&perline=1" draggable="true" ondragstart="drag(event)"
+                id="scala" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=sklearn&perline=1" draggable="true" ondragstart="drag(event)"
+                id="sklearn" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=selenium&perline=1" draggable="true" ondragstart="drag(event)"
+                id="selenium" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=sentry&perline=1" draggable="true" ondragstart="drag(event)"
+                id="sentry" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=sequelize&perline=1" draggable="true" ondragstart="drag(event)"
+                id="sequelize" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=sketchup&perline=1" draggable="true" ondragstart="drag(event)"
+                id="sketchup" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=solidity&perline=1" draggable="true" ondragstart="drag(event)"
+                id="solidity" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=solidjs&perline=1" draggable="true" ondragstart="drag(event)"
+                id="solidjs" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=svelte&perline=1" draggable="true" ondragstart="drag(event)"
+                id="svelte" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=svg&perline=1" draggable="true" ondragstart="drag(event)" id="svg"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=swift&perline=1" draggable="true" ondragstart="drag(event)"
+                id="swift" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=symfony&perline=1" draggable="true" ondragstart="drag(event)"
+                id="symfony" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=tailwind&perline=1" draggable="true" ondragstart="drag(event)"
+                id="tailwind" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=tauri&perline=1" draggable="true" ondragstart="drag(event)"
+                id="tauri" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=tensorflow&perline=1" draggable="true" ondragstart="drag(event)"
+                id="tensorflow" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=terraform&perline=1" draggable="true" ondragstart="drag(event)"
+                id="terraform" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=threejs&perline=1" draggable="true" ondragstart="drag(event)"
+                id="threejs" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=twitter&perline=1" draggable="true" ondragstart="drag(event)"
+                id="twitter" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=ts&perline=1" draggable="true" ondragstart="drag(event)" id="ts"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=ubuntu&perline=1" draggable="true" ondragstart="drag(event)"
+                id="ubuntu" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=unity&perline=1" draggable="true" ondragstart="drag(event)"
+                id="unity" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=unreal&perline=1" draggable="true" ondragstart="drag(event)"
+                id="unreal" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=v&perline=1" draggable="true" ondragstart="drag(event)" id="v"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=vala&perline=1" draggable="true" ondragstart="drag(event)"
+                id="vala" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=vercel&perline=1" draggable="true" ondragstart="drag(event)"
+                id="vercel" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=vim&perline=1" draggable="true" ondragstart="drag(event)" id="vim"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=visualstudio&perline=1" draggable="true" ondragstart="drag(event)"
+                id="visualstudio" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=vite&perline=1" draggable="true" ondragstart="drag(event)"
+                id="vite" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=vitest&perline=1" draggable="true" ondragstart="drag(event)"
+                id="vitest" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=vscode&perline=1" draggable="true" ondragstart="drag(event)"
+                id="vscode" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=vscodium&perline=1" draggable="true" ondragstart="drag(event)"
+                id="vscodium" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=vue&perline=1" draggable="true" ondragstart="drag(event)" id="vue"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=vuetify&perline=1" draggable="true" ondragstart="drag(event)"
+                id="vuetify" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=wasm&perline=1" draggable="true" ondragstart="drag(event)"
+                id="wasm" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=webflow&perline=1" draggable="true" ondragstart="drag(event)"
+                id="webflow" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=webpack&perline=1" draggable="true" ondragstart="drag(event)"
+                id="webpack" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=webstorm&perline=1" draggable="true" ondragstart="drag(event)"
+                id="webstorm" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=windicss&perline=1" draggable="true" ondragstart="drag(event)"
+                id="windicss" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=windows&perline=1" draggable="true" ondragstart="drag(event)"
+                id="windows" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=wordpress&perline=1" draggable="true" ondragstart="drag(event)"
+                id="wordpress" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=workers&perline=1" draggable="true" ondragstart="drag(event)"
+                id="workers" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=xd&perline=1" draggable="true" ondragstart="drag(event)" id="xd"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=yarn&perline=1" draggable="true" ondragstart="drag(event)"
+                id="yarn" class="drag-item">
+            <img src="https://skillicons.dev/icons?i=yew&perline=1" draggable="true" ondragstart="drag(event)" id="yew"
+                class="drag-item">
+            <img src="https://skillicons.dev/icons?i=zig&perline=1" draggable="true" ondragstart="drag(event)" id="zig"
+                class="drag-item">
+        </div>
+        <div id="box2" class="box" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+        </div>
+    </div>
+    <div class="generated-url-container">
+        <p>Generated URL:</p>
+        <div class="url-container">
+            <span id="generatedUrl"></span>
+            <button class="copy" id="copyButton">
+                <span data-text-end="Copied!" data-text-initial="Copy to clipboard" class="tooltip"></span>
+                <span>
+                    <svg xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 6.35 6.35" y="0"
+                        x="0" height="20" width="20" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" class="clipboard">
+                        <g>
+                            <path fill="currentColor"
+                                d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z">
+                            </path>
+                        </g>
+                    </svg>
+                    <svg xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 24 24" y="0" x="0"
+                        height="18" width="18" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" class="checkmark">
+                        <g>
+                            <path data-original="#000000" fill="currentColor"
+                                d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z">
+                            </path>
+                        </g>
+                    </svg>
+                </span>
+            </button>
+
+        </div>
+    </div>
+    <div class="center">
+
+        <img id="previewImg" src="https://next.stellar-cloud.com/index.php/s/Z8KPbfjSFJfb4Rr/download/Logo.png"
+            alt="Preview Image" class="preview-img" width="512" , height="256">
+    </div>
+</body>
+
+</html>

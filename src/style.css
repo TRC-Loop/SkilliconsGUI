@@ -1,0 +1,317 @@
+/*
+ * author: AK
+ * created on 23-05-2024-19h-07m
+ * github: https://github.com/TRC-Loop
+ * email: ak@stellar-code.com
+ * copyright 2024
+*/
+
+body {
+  font-family: 'Archivo', sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  color: #f4f4f4 !important;
+  background-color: #25262b !important;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Prevent overflow on the body */
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  margin-right: 20px;
+}
+
+a {
+  color: #b1d4f2;
+  text-decoration: underline;
+}
+
+p {
+  text-align: center;
+}
+
+.small {
+  font-size: 0.8rem;
+}
+
+.monospacefont {
+  font-family: 'Roboto Mono', monospace;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
+}
+
+.padding-top {
+  padding-top: 0.75rem;
+}
+
+sep {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #3d3e47;
+  margin: 1rem 0;
+}
+
+.search-bar {
+  position: relative;
+}
+
+#searchInput {
+  padding-right: 30px;
+  /* Adjust padding to make space for clear button */
+  padding-left: 30px;
+  /* Adjust padding to make space for search icon */
+}
+
+/* Adjust the spacing between the theme switch label and the button */
+.form-check-label {
+  margin-right: 10px;
+  /* Add margin to the right of the label */
+}
+
+/* Adjust the spacing between the button and the checkbox */
+.form-check-input {
+  margin-right: 5px;
+  /* Add margin to the right of the checkbox */
+}
+
+
+.btn-clear {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #ccc;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.box {
+  border: 2px solid #ccc;
+  padding: 10px;
+  width: 300px;
+  /* Fixed width */
+  height: 300px;
+  /* Fixed height */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  /* Dynamic columns */
+  grid-auto-rows: minmax(50px, 1fr);
+  /* Ensure items are at least 50px tall */
+  grid-gap: 5px;
+  overflow: auto;
+  /* Enable scrolling if content overflows */
+}
+
+.drag-item {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.generated-url-container {
+  text-align: center;
+  margin-top: 20px;
+  color: #25262b;
+}
+
+.generated-url-container p {
+  margin-bottom: 10px;
+  color: #25262b;
+}
+
+.url-container {
+  display: inline-block;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  padding: 10px;
+  color: #25262b;
+}
+
+.copy-button {
+  margin-left: 10px;
+}
+
+.modal-dialog {
+  color: #000;
+  /* Set text color to black */
+}
+
+.modal-content {
+  background-color: #fff;
+  /* Set background color to white */
+}
+
+
+/* btn by https://uiverse.io/Galahhad/kind-cheetah-52 */
+.copy {
+  /* button */
+  --button-bg: #353434;
+  --button-hover-bg: #464646;
+  --button-text-color: #CCCCCC;
+  --button-hover-text-color: #8bb9fe;
+  --button-border-radius: 10px;
+  --button-diameter: 36px;
+  --button-outline-width: 1px;
+  --button-outline-color: rgb(141, 141, 141);
+  /* tooltip */
+  --tooltip-bg: #f4f3f3;
+  --toolptip-border-radius: 4px;
+  --tooltip-font-family: Menlo, Roboto Mono, monospace;
+  /* 👆 this field should not be empty */
+  --tooltip-font-size: 12px;
+  /* 👆 this field should not be empty */
+  --tootip-text-color: rgb(50, 50, 50);
+  --tooltip-padding-x: 7px;
+  --tooltip-padding-y: 7px;
+  --tooltip-offset: 8px;
+  /* --tooltip-transition-duration: 0.3s; */
+  /* 👆 if you need a transition, 
+    just remove the comment,
+    but I didn't like the transition :| */
+}
+
+.copy {
+  box-sizing: border-box;
+  width: var(--button-diameter);
+  height: var(--button-diameter);
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-bg);
+  color: var(--button-text-color);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
+
+.tooltip {
+  position: absolute;
+  opacity: 0;
+  visibility: 0;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font: var(--tooltip-font-size) var(--tooltip-font-family);
+  color: var(--tootip-text-color);
+  background: var(--tooltip-bg);
+  padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
+  border-radius: var(--toolptip-border-radius);
+  pointer-events: none;
+  transition: all var(--tooltip-transition-duration) cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip::before {
+  content: attr(data-text-initial);
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: calc(var(--tooltip-padding-y) / 2 * -1);
+  width: var(--tooltip-padding-y);
+  height: var(--tooltip-padding-y);
+  background: inherit;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: -999;
+  pointer-events: none;
+}
+
+.copy svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkmark {
+  display: none;
+}
+
+/* actions */
+
+.copy:hover .tooltip,
+.copy:focus:not(:focus-visible) .tooltip {
+  opacity: 1;
+  visibility: visible;
+  top: calc((100% + var(--tooltip-offset)) * -1);
+}
+
+.copy:focus:not(:focus-visible) .tooltip::before {
+  content: attr(data-text-end);
+}
+
+.copy:focus:not(:focus-visible) .clipboard {
+  display: none;
+}
+
+.copy:focus:not(:focus-visible) .checkmark {
+  display: block;
+}
+
+.copy:hover,
+.copy:focus {
+  background-color: var(--button-hover-bg);
+}
+
+.copy:active {
+  outline: var(--button-outline-width) solid var(--button-outline-color);
+}
+
+.copy:hover svg {
+  color: var(--button-hover-text-color);
+}
