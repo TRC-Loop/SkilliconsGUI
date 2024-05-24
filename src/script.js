@@ -1,6 +1,6 @@
 /**
  * author: AK
- * created on 23-05-2024-19h-08m
+ * created on 24-05-2024-15h-25m
  * github: https://github.com/TRC-Loop
  * email: ak@stellar-code.com
  * copyright 2024
@@ -149,6 +149,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Add drag event listener to box2
     document.getElementById('box2').addEventListener('drag', function (event) {
+        updateGeneratedUrl();
+    });
+
+    document.getElementById('clearButton').addEventListener('click', function () {
+        var box1 = document.getElementById('box1');
+        var box2 = document.getElementById('box2');
+        var iplSlider = document.getElementById('iconsPerLineRange');
+        var themeSwitch = document.getElementById('themeSwitch');
+        var items = box2.querySelectorAll('.drag-item');
+        var searchInput = document.getElementById('searchInput');
+
+        items.forEach(function (item) {
+            box1.appendChild(item);
+        });
+
+        themeSwitch.checked = false;
+        iplSlider.value = 15;
+        searchInput.value = '';
+        sortBox1();
+        updateGeneratedUrl();
+        
+    }); 
+
+    // If moveButton is pressed, move all items from box1 to box2
+    document.getElementById('moveButton').addEventListener('click', function () {
+        var box1 = document.getElementById('box1');
+        var box2 = document.getElementById('box2');
+        var items = box1.querySelectorAll('.drag-item');
+
+        items.forEach(function (item) {
+            box2.appendChild(item);
+        });
+
         updateGeneratedUrl();
     });
 

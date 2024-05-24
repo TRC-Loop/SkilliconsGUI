@@ -1,6 +1,6 @@
 /*
  * author: AK
- * created on 23-05-2024-19h-07m
+ * created on 24-05-2024-15h-25m
  * github: https://github.com/TRC-Loop
  * email: ak@stellar-code.com
  * copyright 2024
@@ -17,7 +17,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* Prevent overflow on the body */
 }
 
 .content {
